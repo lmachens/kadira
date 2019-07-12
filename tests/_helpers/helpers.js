@@ -124,7 +124,7 @@ CloseClient = function(client) {
   client.disconnect();
   var f = new Future();
   function checkClientExtence(sessionId) {
-    var sessionExists = Meteor.server.sessions[sessionId];
+    var sessionExists = Meteor.server.sessions.has(sessionId);
     if(sessionExists) {
       setTimeout(function() {
         checkClientExtence(sessionId);

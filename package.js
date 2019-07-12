@@ -1,8 +1,8 @@
 Package.describe({
   summary: 'Performance Monitoring for Meteor',
   version: '2.31.0',
-  git: 'https://github.com/afrokick/kadira.git',
-  name: 'afrokick:kadira',
+  git: 'https://github.com/lmachens/kadira.git',
+  name: 'lmachens:kadira',
 });
 
 const npmModules = {

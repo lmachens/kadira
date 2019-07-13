@@ -17,12 +17,12 @@ const npmModules = {
 
 Npm.depends(npmModules);
 
-Package.on_use(function(api) {
+Package.on_use(function (api) {
   configurePackage(api);
   api.export(['Kadira']);
 });
 
-Package.on_test(function(api) {
+Package.on_test(function (api) {
   configurePackage(api);
   api.use(['tinytest', 'test-helpers'], ['client', 'server']);
 
@@ -83,11 +83,9 @@ Package.on_test(function(api) {
 });
 
 function configurePackage(api) {
-  if (api.versionsFrom) {
-    api.versionsFrom('METEOR@1.2');
-    api.use('lamhieu:meteorx@2.0.1', ['server']);
-    api.use('meteorhacks:zones@1.2.1', { weak: true });
-  }
+  api.versionsFrom('METEOR@1.8.1');
+  api.use('lamhieu:meteorx@2.0.1', ['server']);
+  api.use('meteorhacks:zones@1.2.1', { weak: true });
 
   api.use(['minimongo', 'livedata', 'mongo-livedata', 'ejson', 'ddp-common', 'underscore', 'http', 'email', 'random'], ['server']);
   api.use(['underscore', 'random', 'http', 'localstorage'], ['client']);
